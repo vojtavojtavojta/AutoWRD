@@ -15,7 +15,7 @@ if %ERRORLEVEL% neq 0 (
     @TIMEOUT /T 10 /NOBREAK >nul
 )
 
-ping -n 2 %TARGET_PC% | find "Reply from %TARGET_PC%" >nul
+ping -n 2 %TARGET_PC% | find "Reply from targetpcipaddress" >nul
 if %ERRORLEVEL% equ 0 (
     echo Target PC is already available, connecting...
     mstsc /v:%TARGET_PC%
@@ -37,6 +37,3 @@ echo Wait for the target PC to be available...
 
 echo Connecting...
 mstsc /v:%TARGET_PC%
-
-
-echo Auto Remote desktop is done.
