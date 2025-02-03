@@ -37,3 +37,6 @@ echo Wait for the target PC to be available...
 
 echo Connecting...
 mstsc /v:%TARGET_PC%
+
+
+echo Auto Remote desktop is done.
